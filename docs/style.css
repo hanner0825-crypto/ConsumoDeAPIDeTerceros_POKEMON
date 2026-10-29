@@ -1,0 +1,79 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #222;
+}
+
+header {
+  background: #d62828;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+main { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem; }
+h2 { margin: 1.5rem 0 1rem; }
+
+#form-busqueda { display: flex; gap: .5rem; flex-wrap: wrap; }
+#form-busqueda input {
+  flex: 1; min-width: 200px; padding: .6rem;
+  border: 1px solid #bbb; border-radius: 6px;
+}
+
+button {
+  padding: .6rem 1rem; border: none; border-radius: 6px;
+  background: #003049; color: #fff; cursor: pointer;
+}
+button:hover { background: #045a85; }
+button:disabled { background: #999; cursor: not-allowed; }
+
+#mensaje { margin: .8rem 0; min-height: 1.2rem; }
+#mensaje.error { color: #b00020; font-weight: bold; }
+
+.oculto { display: none; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  background: #fff; border-radius: 10px; padding: 1rem;
+  text-align: center; cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  transition: transform .15s;
+}
+.tarjeta:hover { transform: translateY(-4px); }
+.tarjeta img { width: 100px; height: 100px; }
+.tarjeta h3 { text-transform: capitalize; font-size: 1rem; }
+.tarjeta small { color: #777; }
+
+#detalle {
+  background: #fff; border-radius: 12px; padding: 1.5rem;
+  margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;
+}
+#detalle.oculto { display: none; }
+#detalle img { width: 200px; height: 200px; }
+#detalle h2 { text-transform: capitalize; margin: 0 0 .5rem; }
+
+.tipo {
+  display: inline-block; padding: .2rem .7rem; margin-right: .3rem;
+  border-radius: 12px; background: #eae2b7; text-transform: capitalize;
+  font-size: .85rem;
+}
+
+.stat { display: flex; align-items: center; gap: .5rem; margin: .3rem 0; }
+.stat span:first-child { width: 110px; text-transform: capitalize; font-size: .85rem; }
+.barra { background: #ddd; border-radius: 4px; height: 10px; width: 160px; }
+.barra div { background: #2a9d8f; height: 100%; border-radius: 4px; }
+
+.paginacion {
+  display: flex; justify-content: center; align-items: center;
+  gap: 1rem; margin-top: 1.5rem;
+}
+
+footer { text-align: center; padding: 1.5rem; color: #666; }

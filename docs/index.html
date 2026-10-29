@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex - Consumo de API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pokédex</h1>
+    <p>Consumo de la API PokéAPI con JavaScript</p>
+  </header>
+
+  <main>
+    <form id="form-busqueda">
+      <input type="text" id="entrada" placeholder="Nombre o número (ej: pikachu, 25)" required>
+      <button type="submit">Buscar</button>
+      <button type="button" id="btn-aleatorio">Aleatorio</button>
+    </form>
+
+    <p id="mensaje" role="status"></p>
+
+    <section id="detalle" class="oculto"></section>
+
+    <h2>Primeros Pokémon</h2>
+    <section id="lista" class="grid"></section>
+
+    <div class="paginacion">
+      <button id="btn-anterior">Anterior</button>
+      <span id="pagina">Página 1</span>
+      <button id="btn-siguiente">Siguiente</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Datos: <a href="https://pokeapi.co/" target="_blank" rel="noopener">pokeapi.co</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
